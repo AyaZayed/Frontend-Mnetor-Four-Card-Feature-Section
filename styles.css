@@ -20,15 +20,13 @@ p {
 #cards {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
-.row {
-  flex-direction: row;
-}
-
-.outer-row {
+.col {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -64,27 +62,13 @@ img {
   border-top: 4px solid hsl(34, 97%, 64%);
 }
 
-@media (max-width: 1024px) and (min-width: 375px) {
-  .card {
-    text-align: center;
-  }
-}
-
-@media (min-width: 1024px) {
-  .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width: 992px) {
+  #cards {
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
-  .down-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .outer {
-    position: relative;
-    top: 10rem;
+  .col {
+    height: fit-content;
   }
 }
